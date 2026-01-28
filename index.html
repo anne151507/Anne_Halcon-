@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SDIHS Combined Layout</title>
+    <style>
+        /* General Layout Styles */
+        header {
+            background-color: #F5276C;
+            padding: 5px;
+            text-align: center;
+            font-size: 35px;
+            color: white;
+        }
+
+        /* Clears floats so surrounding content doesn't run up next to the floated navside/article */
+        section::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        
+        /* Footer/Contact Info Styles (Now located under the header) */
+        footer {
+            background-color: #FAA0A0; /* Changed to match header color */
+            padding: 5px;
+            text-align: center;
+            color: white;
+            /* Added font size to match the image display */
+            font-size: 14px; 
+        }
+
+        /* Top Navigation Bar Styles (ul.nav) */
+        ul.nav {
+            display: flex;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            background-color: blue;
+        }
+
+        ul.nav li a {
+            display: block;
+            color: #f1f1f1;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        ul.nav li a:hover {
+            background-color: #C21E56;
+            color: black;
+        }
+
+        /* Sidebar Navigation Styles (navside) */
+        navside {
+            float: left;
+            width: 30%;
+            height: 300px;
+            background: #ccc;
+            padding: 20px;
+            box-sizing: border-box; 
+        }
+
+        navside ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        /* Main Article Content Styles (article) */
+        article {
+            float: left;
+            width: 70%;
+            background-color: #f1f1f1;
+            height: 300px;
+            padding: 20px;
+            box-sizing: border-box; 
+        }
+    </style>
+</head>
+<body>
+    
+    <header>
+        <h2>SDIHS</h2>
+        <h3 style="font-size:18px;">Santo Domingo Integrated High School</h3>
+    </header>
+
+    <footer>
+        <p>Anne Jyrille R. Marasigan| 0912345615</p>
+    </footer>
+
+    <ul class="nav">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">First Quarter</a></li>
+        <li><a href="#">Second Quarter</a></li>
+        <li><a href="#">About</a></li>
+    </ul>
+
+    <section>
+        
+        <navside>
+            <ul>
+                <li><a href="#">School Profile</a></li>
+                <li><a href="#">SHS</a></li>
+                <li><a href="#">JHS</a></li>
+            </ul>
+        </navside>
+
+        <article>
+            <h1>School Profile</h1>
+            <p>Santo Domingo Integrated High School founded in 1971.<br>It is located at Barangay Santo Domingo, City of Santa Rosa, Laguna</p>
+        </article>
+
+    </section>
+
+</body>
+</html>
